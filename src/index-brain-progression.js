@@ -2,32 +2,31 @@ import readlineSync from 'readline-sync';
 
 const getUsername = () => readlineSync.question('May I have your name? ');
 
-const getRandomNumber = () => Math.floor(Math.random() * 100);
+const getRandomNumber = () => Math.round(Math.random() * 100);
 
-const getRandomArrayLength = () => Math.floor(Math.random() * 6 + 6);
+const getRandomArrayLength = () => Math.round(Math.random() * 6 + 4);
 
-const randomDiff = () => Math.floor(Math.random() * 10) + 1;
+const getRandomNumberToTen = () => Math.round(Math.random() * 10) + 1;
 
 const startRound = () => {
-  const fistIndex = getRandomNumber();
   const arrayLength = getRandomArrayLength();
-  const difference = randomDiff();
-  const progression = [fistIndex];
+  const difference = getRandomNumberToTen();
+  const progression = [getRandomNumber()];
 
-  for (let index = 1; index < arrayLength; index += 1) {
-    const intermediateVariable = progression[index - 1] + difference;
+  for (let i = 0; i < arrayLength; i += 1) {
+    const intermediateVariable = progression[i] + difference;
     progression.push(intermediateVariable);
   }
 
-  let number = difference;
+  let indexProgression = getRandomNumberToTen();
   let correctAnswer;
-  if (number < progression.length) {
-    correctAnswer = progression[number];
-    progression.splice(number, 1, '..');
+  if (indexProgression < progression.length) {
+    correctAnswer = progression[indexProgression];
+    progression.splice(indexProgression, 1, '..');
   } else {
-    number -= 5;
-    correctAnswer = progression[number];
-    progression.splice(number, 1, '..');
+    indexProgression -= 5;
+    correctAnswer = progression[indexProgression];
+    progression.splice(indexProgression, 1, '..');
   }
 
   const str = progression.join(' ');
