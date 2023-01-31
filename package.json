@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/yasminaestel/brain-progression/issues"
   },
-  "homepage": "https://github.com/yasminaestel/brain-progression#readme"
+  "homepage": "https://github.com/yasminaestel/brain-progression#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "readline-sync": "^1.4.10"
+  }
 }
