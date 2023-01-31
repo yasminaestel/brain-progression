@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-console.log("Welcome to the Brain Progression");
+
+import gameBrainProgression from '../src/index-brain-progression.js';
+
+gameBrainProgression();
