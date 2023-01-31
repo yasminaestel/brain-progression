@@ -1,0 +1,23 @@
+{
+  "name": "brain-progression",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "*simple math console game*",
+  "main": "index.js",
+  "bin": {
+    "brain-progression": "bin/brain-progression.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasminaestel/brain-progression.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasminaestel/brain-progression/issues"
+  },
+  "homepage": "https://github.com/yasminaestel/brain-progression#readme"
+}
