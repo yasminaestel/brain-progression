@@ -1,9 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const startGames = () => {
-  console.log('Welcome to the Brain Games!');
-};
-
 const getUsername = () => readlineSync.question('May I have your name? ');
 
 const getRandomNumber = () => Math.floor(Math.random() * 100);
@@ -46,9 +42,10 @@ const startRound = () => {
 };
 
 const gameBrainProgression = () => {
-  startGames();
+  console.log('Welcome to the Brain Games!');
   const username = getUsername();
   console.log(`Hello, ${username}!`);
+  console.log('What number is missing in the progression?');
 
   for (let i = 0; i < 3; i += 1) {
     const isCorrect = startRound();
